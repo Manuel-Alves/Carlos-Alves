@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — [Nome do Escritório]</title>
+<meta name="description" content="Marque uma consulta com [Nome do Escritório] em [Cidade]. Telefone, email e formulário de contacto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="nav-brand">[Nome]<span>.</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="areas-de-pratica.html">Áreas de Prática</a></li>
+      <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      <li class="nav-cta"><a href="contacto.html" class="btn btn-outline-dark">Marcar Consulta</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom: var(--space-5);">
+  <div class="container hero-inner">
+    <span class="eyebrow">Contacto</span>
+    <h1>Vamos conversar sobre o seu caso</h1>
+    <p class="lead">Preencha o formulário ou contacte-nos diretamente. Respondemos normalmente em [X horas / dias úteis].</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- INFO + FORMULÁRIO                                             -->
+<!-- ============================================================ -->
+<section class="section">
+  <div class="container contact-layout">
+
+    <!-- Informação de contacto -->
+    <div>
+      <h2>Informação de Contacto</h2>
+
+      <div class="contact-info-item">
+        <span class="icon" aria-hidden="true">@</span>
+        <div>
+          <h4>Email</h4>
+          <p><a href="mailto:[email@escritorio.pt]">[email@escritorio.pt]</a></p>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <span class="icon" aria-hidden="true">☎</span>
+        <div>
+          <h4>Telefone</h4>
+          <p><a href="tel:+351000000000">+351 [000 000 000]</a></p>
+          <p style="font-size: 0.8rem;">[Chamada para rede fixa/móvel nacional, indicar se aplicável]</p>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <span class="icon" aria-hidden="true">⚑</span>
+        <div>
+          <h4>Morada</h4>
+          <p>[Rua, número, código postal, cidade]</p>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <span class="icon" aria-hidden="true">🕐</span>
+        <div>
+          <h4>Horário</h4>
+          <p>[Segunda a Sexta, 9h00 – 18h00]</p>
+        </div>
+      </div>
+
+      <div class="map-placeholder">
+        [Espaço reservado para mapa/localização — incorporar Google Maps com a morada real antes de publicar]
+      </div>
+    </div>
+
+    <!-- Formulário -->
+    <div class="form-card">
+      <h2 style="margin-bottom: var(--space-1);">Envie uma Mensagem</h2>
+      <p style="margin-bottom: var(--space-3);">Os campos assinalados com * são obrigatórios.</p>
+
+      <!--
+        FORMULÁRIO — ver README.md para a configuração completa.
+
+        1. Criar conta gratuita em https://formspree.io
+        2. Criar um formulário associado ao email de destino desejado
+        3. Substituir "YOUR_FORM_ID" abaixo pelo ID fornecido pelo Formspree
+        4. O email de destino pode ser trocado depois diretamente no
+           painel do Formspree, sem editar este ficheiro.
+      -->
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+        <div class="form-two-col">
+          <div class="form-row">
+            <label for="name">Nome *</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="form-two-col">
+          <div class="form-row">
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+          <div class="form-row">
+            <label for="subject">Área de Interesse</label>
+            <select id="subject" name="subject">
+              <option value="">Selecionar…</option>
+              <option value="Direito Civil">Direito Civil</option>
+              <option value="Direito Laboral">Direito Laboral</option>
+              <option value="Direito da Família">Direito da Família</option>
+              <option value="Direito Penal">Direito Penal</option>
+              <option value="Direito Comercial e Societário">Direito Comercial e Societário</option>
+              <option value="Direito Imobiliário">Direito Imobiliário</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Mensagem *</label>
+          <textarea id="message" name="message" required placeholder="Descreva brevemente a sua situação…"></textarea>
+        </div>
+
+        <!-- Campo "honeypot" anti-spam: invisível para pessoas, apanha bots -->
+        <div class="form-honeypot" aria-hidden="true">
+          <label for="_gotcha">Não preencher este campo</label>
+          <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- Linha de assunto do email recebido -->
+        <input type="hidden" name="_subject" value="Novo contacto via website — [Nome do Escritório]">
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
+
+        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+
+        <p class="form-note">Ao submeter este formulário, aceita ser contactado(a) relativamente ao assunto indicado. Os seus dados são utilizados apenas para este fim. [Ajustar/remover conforme a política de privacidade real do escritório — considerar link para página de Política de Privacidade/RGPD.]</p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>[Nome do Escritório]</h4>
+        <p>[Morada completa do escritório, código postal e cidade].</p>
+        <p>[Inscrição na Ordem dos Advogados nº XXXXX]</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="areas-de-pratica.html">Áreas de Prática</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contactos</h4>
+        <ul>
+          <li><a href="mailto:[email@escritorio.pt]">[email@escritorio.pt]</a></li>
+          <li><a href="tel:+351000000000">+351 [000 000 000]</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> [Nome do Escritório]. Todos os direitos reservados.</span>
+      <span>Website desenvolvido por Closer Consultoria</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
