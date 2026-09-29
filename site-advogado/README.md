@@ -1,6 +1,11 @@
-# Site — [Nome do Escritório]
+# Site — Carlos Esteves Alves, Advogado
 
 Site estático (HTML/CSS/JS puro, sem build tools) pronto para deploy no Cloudflare Pages via GitHub.
+
+Dados já preenchidos no site: nome, morada (Rua Dr. Manuel Rodrigues, n.º 26, 2.º Esq., 3000-258
+Coimbra), número de Ordem (72072C), telefone (+351 917 561 256), email (calvesavz@sapo.pt, com o
+email institucional da Ordem — ce.alves-72072c@adv.oa.pt — também indicado na página de Contacto)
+e as 5 áreas de prática (Direito Penal, Civil, Contraordenacional, do Trabalho e da Família).
 
 ## Estrutura
 
@@ -19,19 +24,18 @@ site-advogado/
 
 Não há passo de build — os ficheiros podem ser servidos diretamente como estão.
 
-## 1. Substituir os placeholders
+## 1. Substituir os placeholders que faltam
 
-Todo o conteúdo de exemplo está marcado entre parênteses retos, ex: `[Nome do Escritório]`,
-`[email@escritorio.pt]`. Os principais pontos a rever, ficheiro a ficheiro:
+Os dados de contacto e as áreas de prática já estão preenchidos. O que ainda falta está marcado
+entre parênteses retos, ex: `[Fotografia profissional]`. Os principais pontos a rever, ficheiro a
+ficheiro:
 
-- **Todas as páginas** (repetido no `<header>` e no `<footer>` de cada `.html`):
-  - `[Nome]` na marca do cabeçalho
-  - `[Nome do Escritório]`, morada, número de inscrição na Ordem, email e telefone no rodapé
-  - `<title>` e `<meta name="description">` no `<head>`
-- **index.html**: título do hero, estatísticas (`[XX] anos`, `[XXX]+ casos`, nº de Ordem), texto de "Sobre" resumido
-- **sobre.html**: biografia, formação académica, credenciais
+- **index.html**: estatísticas (`[XX] anos de experiência`, `[XXX]+ casos`), frase de resumo em "Sobre"
+- **sobre.html**: os três parágrafos de biografia (formação, experiência, filosofia de trabalho) e a
+  formação académica/credenciais na lista
 - **areas-de-pratica.html**: parágrafos `[Detalhar exemplos concretos…]` em cada área
-- **contacto.html**: morada, telefone, horário, e o `action` do formulário (ver secção 2)
+- **contacto.html**: horário de atendimento, texto sobre política de privacidade/RGPD, e o `action`
+  do formulário (ver secção 2)
 
 Dica: procura por `[` em todos os ficheiros do projeto para encontrar rapidamente tudo o que falta editar:
 
