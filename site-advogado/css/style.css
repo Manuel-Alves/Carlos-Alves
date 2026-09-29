@@ -383,6 +383,16 @@ p { margin: 0 0 var(--space-2); color: var(--color-ink-soft); }
   text-align: center;
   padding: var(--space-3);
 }
+/* Variante para fotografia real (em vez do placeholder tracejado acima) */
+img.bio-photo {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  padding: 0;
+}
 @media (max-width: 760px) {
   .bio-layout { grid-template-columns: 1fr; }
   .bio-photo { max-width: 280px; }
