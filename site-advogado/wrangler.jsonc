@@ -1,0 +1,11 @@
+{
+  "name": "carlos-esteves-alves",
+  "compatibility_date": "2026-09-30",
+
+  // Site 100% estático (sem JavaScript do lado do servidor) — não é
+  // necessário um "main" com código de Worker. O Wrangler serve
+  // diretamente os ficheiros desta pasta.
+  "assets": {
+    "directory": "./"
+  }
+}
