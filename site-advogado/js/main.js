@@ -1,9 +1,3 @@
-/* ==========================================================================
-   [NOME DO ESCRITÓRIO] — Scripts gerais do site
-   - Menu de navegação (mobile)
-   - Ano automático no rodapé
-   - Envio do formulário de contacto via Formspree (AJAX, com fallback)
-   ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -36,14 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  /* ---------------------------------------------------------- */
-  /* Formulário de contacto                                       */
-  /*                                                                */
-  /* Envia via Formspree (https://formspree.io) para o email        */
-  /* configurado no painel do Formspree — ver README.md para a      */
-  /* configuração inicial e como trocar o email de destino mais     */
-  /* tarde (não é necessário editar este ficheiro para isso).       */
-  /* ---------------------------------------------------------- */
   var form = document.getElementById('contact-form');
   if (!form) return;
 
